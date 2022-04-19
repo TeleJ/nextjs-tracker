@@ -7,7 +7,7 @@
   margin-top: 10px;
   border-radius: 6px;
   position: relative;
-  cursor: move;
+  cursor: pointer;
 }
 
 .Title {

@@ -19,6 +19,7 @@ export async function getStaticProps() {
 }
 
 export default function Home({ animes }) {
+  console.log(supabase.auth.user());
   async function addAnimeHandler(enteredAnimeData) {
     console.log(enteredAnimeData);
     const { data: animes, error } = await supabase
