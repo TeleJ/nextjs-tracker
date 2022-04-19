@@ -1,6 +1,6 @@
 import { Fragment } from 'react';
 
-import supabase from '../lib/supabase';
+import supabase, { getServiceSupabase } from '../lib/supabase';
 import NewAnimeForm from '../components/animes/NewAnimeForm';
 import AnimeList from '../components/animes/AnimeList';
 
@@ -29,7 +29,6 @@ export default function Home({ animes }) {
   return (
     <Fragment>
       <NewAnimeForm onAddAnime={addAnimeHandler} />
-      {/* <pre>{JSON.stringify(animes, null, 2)}</pre> */}
       <AnimeList animes={animes} />
     </Fragment>
   );

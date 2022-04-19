@@ -1,4 +1,5 @@
 import { useRef, useState } from 'react';
+import { getServiceSupabase } from '../../lib/supabase';
 
 import Card from '../ui/Card';
 import classes from './NewAnimeForm.module.css';
