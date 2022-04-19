@@ -24,7 +24,7 @@ export default function Home({ animes }) {
     console.log(enteredAnimeData);
     const { data: animes, error } = await supabase
       .from('animes')
-      .insert([{ title: enteredAnimeData }]);
+      .insert([{ enteredAnimeData }]);
   }
 
   return (
