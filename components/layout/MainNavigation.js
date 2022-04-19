@@ -1,4 +1,4 @@
-import Link from 'next/Link';
+import Link from 'next/link';
 import { SiReact } from 'react-icons/si';
 
 import classes from './MainNavigation.module.css';
