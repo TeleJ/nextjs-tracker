@@ -1,0 +1,28 @@
+.Container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  background-color: white;
+  border: 2px solid #ccc;
+  margin-top: 10px;
+  border-radius: 6px;
+  position: relative;
+  cursor: move;
+}
+
+.Title {
+  width: 75vh;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  height: 30px;
+  text-transform: none;
+  padding-left: 20px;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.Container:hover {
+  /* opacity: 0.9; */
+  transform: scale(1.02);
+  transition: all 0.1s ease-in-out;
+}

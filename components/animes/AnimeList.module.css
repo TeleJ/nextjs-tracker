@@ -1,0 +1,38 @@
+.Title {
+  color: #b94841;
+  flex: 1;
+  margin-bottom: 20px;
+}
+
+.Container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin-top: 20px;
+  position: relative;
+}
+
+.OrderedList {
+  list-style-type: decimal;
+  display: list-item;
+  margin: 0;
+  list-style: none;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-bottom: 20px;
+  width: 60vh;
+}
+
+.OrderedList li {
+  display: list-item;
+  list-style: decimal;
+  list-style-position: outside;
+}
+
+.ButtonContainer {
+  display: flex;
+  justify-content: center;
+}

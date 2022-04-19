@@ -1,0 +1,164 @@
+.Header {
+  height: 66px;
+  padding-right: 20px;
+  padding-left: 20px;
+  border-bottom: 2px solid rgba(242, 243, 245, 0.07);
+  background-color: #17161b;
+  color: #f2f3f5;
+}
+
+.NavBarContainer {
+  display: flex;
+  min-height: 66px;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+  width: 100%;
+  height: 100%;
+}
+
+.LogoAnchor {
+  display: flex;
+  padding-right: 20px;
+  justify-content: center;
+  align-items: center;
+  border-right: 2px solid hsla(0, 0%, 100%, 0.14);
+}
+
+.NavBrand {
+  position: relative;
+  float: left;
+  text-decoration: none;
+  color: #fff;
+}
+
+.Logo {
+  max-width: 100%;
+  vertical-align: middle;
+  display: inline-block;
+  border: 0;
+  box-sizing: border-box;
+  width: 34px;
+  height: 34px;
+}
+
+.HomeWrapper {
+  display: flex;
+  height: 60px;
+  padding-right: 20px;
+  /* padding-bottom: 0px; */
+  padding-left: 20px;
+  justify-content: flex-end;
+  margin-right: 24px;
+  align-items: center;
+}
+
+.Home {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 44px;
+  margin: 0.67em 0;
+  display: block;
+  text-transform: uppercase;
+}
+
+.Nav {
+  transform: translateY(0px) translateX(0px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+  height: 66px;
+  width: 100%;
+}
+
+.NavLinkWrapper {
+  display: flex;
+  min-height: 60px;
+  padding-right: 25px;
+  padding-left: 25px;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  transition: all 100ms ease;
+  max-width: 100%;
+}
+
+.NavLink {
+  color: #fff;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+  display: flex;
+  min-height: 60px;
+  padding-right: 25px;
+  padding-left: 25px;
+  justify-content: center;
+  align-items: center;
+}
+
+.NavLink:hover {
+  border-bottom: 3px solid #b94841;
+}
+
+.Header ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.NavBarContainerRight {
+  display: flex;
+  height: 54px;
+  justify-content: flex-end;
+  align-items: center;
+  align-self: center;
+  flex: 1;
+}
+
+.Login {
+  text-decoration: none;
+  padding: 10px 24px;
+  color: #b94841;
+  font-size: 16px;
+  margin-right: 10px;
+  margin-left: 10px;
+  background-color: #f2f3f5;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  transform: translate(0px, 0px);
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transition: background-color 200ms linear, color 200ms linear;
+  border-radius: 5px;
+}
+
+.Login:hover {
+  text-align: center;
+  background-color: #b94841;
+  color: #f2f3f5;
+  cursor: pointer;
+}
+
+.LoginText {
+  text-align: center;
+  font-size: 16px;
+  text-decoration: none;
+  list-style: none;
+}
+
+.Login:active {
+  text-decoration: none;
+}
+
+.NavLink:active {
+  border-bottom: '3px solid #b94841';
+}
