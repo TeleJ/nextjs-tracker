@@ -1,4 +1,4 @@
-import { Fragment } from 'react';
+import { Fragment, useEffect } from 'react';
 
 import supabase, { getServiceSupabase } from '../lib/supabase';
 import NewAnimeForm from '../components/animes/NewAnimeForm';
@@ -24,7 +24,7 @@ export default function Home({ animes }) {
     console.log(enteredAnimeData);
     const { data: animes, error } = await supabase
       .from('animes')
-      .insert([{ enteredAnimeData }]);
+      .insert([{ title: enteredAnimeData }]);
   }
 
   return (
