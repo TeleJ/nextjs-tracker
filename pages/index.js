@@ -19,20 +19,6 @@ export async function getStaticProps() {
   };
 }
 
-// export async function getServerSideProps() {
-//   const { data: animes, error } = await supabase.from('animes').select('*');
-
-//   if (error) {
-//     throw new Error(error);
-//   }
-
-//   return {
-//     props: {
-//       animes,
-//     },
-//   };
-// }
-
 export default function Home({ animes }) {
   console.log(supabase.auth.user());
   async function addAnimeHandler(enteredAnimeData) {
@@ -40,8 +26,15 @@ export default function Home({ animes }) {
     const { data: animes, error } = await supabase
       .from('animes')
       .insert([enteredAnimeData]);
-    // .insert([{ title: enteredAnimeData }]);
   }
+
+  // subscribe to all changes
+  const animes = supabase
+    .from('animes')
+    .on('*', (payload) => {
+      console.log('Change received!', payload);
+    })
+    .subscribe();
 
   return (
     <Fragment>
