@@ -14,7 +14,7 @@ const NewAnimeForm = (props) => {
   };
 
   function submitHandler(event) {
-    // event.preventDefault();
+    event.preventDefault();
 
     const enteredTitle = titleInputRef.current.value;
 

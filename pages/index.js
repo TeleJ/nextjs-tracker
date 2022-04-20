@@ -4,7 +4,22 @@ import supabase, { getServiceSupabase } from '../lib/supabase';
 import NewAnimeForm from '../components/animes/NewAnimeForm';
 import AnimeList from '../components/animes/AnimeList';
 
-// export async function getStaticProps() {
+export async function getStaticProps() {
+  const { data: animes, error } = await supabase.from('animes').select('*');
+
+  if (error) {
+    throw new Error(error);
+  }
+
+  return {
+    props: {
+      animes,
+    },
+    revalidate: 1,
+  };
+}
+
+// export async function getServerSideProps() {
 //   const { data: animes, error } = await supabase.from('animes').select('*');
 
 //   if (error) {
@@ -17,20 +32,6 @@ import AnimeList from '../components/animes/AnimeList';
 //     },
 //   };
 // }
-
-export async function getServerSideProps() {
-  const { data: animes, error } = await supabase.from('animes').select('*');
-
-  if (error) {
-    throw new Error(error);
-  }
-
-  return {
-    props: {
-      animes,
-    },
-  };
-}
 
 export default function Home({ animes }) {
   console.log(supabase.auth.user());
