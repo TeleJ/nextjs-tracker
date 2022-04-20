@@ -4,7 +4,21 @@ import supabase, { getServiceSupabase } from '../lib/supabase';
 import NewAnimeForm from '../components/animes/NewAnimeForm';
 import AnimeList from '../components/animes/AnimeList';
 
-export async function getStaticProps() {
+// export async function getStaticProps() {
+//   const { data: animes, error } = await supabase.from('animes').select('*');
+
+//   if (error) {
+//     throw new Error(error);
+//   }
+
+//   return {
+//     props: {
+//       animes,
+//     },
+//   };
+// }
+
+export async function getServerSideProps() {
   const { data: animes, error } = await supabase.from('animes').select('*');
 
   if (error) {
